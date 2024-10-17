@@ -1,4 +1,5 @@
 import 'package:awesome_place/utils/colors.dart';
+import 'package:awesome_place/widgets/reusable/land_marks_card.dart';
 import 'package:flutter/material.dart';
 
 class LandmarksPage extends StatelessWidget {
@@ -14,6 +15,16 @@ class LandmarksPage extends StatelessWidget {
             fontSize: 23,
             fontWeight: FontWeight.w700,
             color: landMarks,
+          ),
+        ),
+      ),
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              LandMarksCard(),
+            ],
           ),
         ),
       ),
