@@ -1,4 +1,8 @@
+import 'package:awesome_place/pages/booking_page.dart';
+import 'package:awesome_place/pages/cultural_page.dart';
+import 'package:awesome_place/pages/landmarks_page.dart';
 import 'package:awesome_place/pages/natural_page.dart';
+import 'package:awesome_place/pages/nightlife_page.dart';
 import 'package:awesome_place/utils/colors.dart';
 import 'package:awesome_place/widgets/cat_card.dart';
 import 'package:flutter/material.dart';
@@ -71,44 +75,87 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => 
-                          const NaturalPage(),
-                          ),);
-                        } ,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NaturalPage(),
+                            ),
+                          );
+                        },
                         child: const CatCardWid(
                           cardBgColor: mainTile,
                           cardWidth: 200,
                           title: 'Natural Wonders',
                         ),
                       ),
-                      const CatCardWid(
-                        cardBgColor: subTile,
-                        cardWidth: 200,
-                        title: 'Landmarks',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LandmarksPage(),
+                            ),
+                          );
+                        },
+                        child: const CatCardWid(
+                          cardBgColor: subTile,
+                          cardWidth: 200,
+                          title: 'Landmarks',
+                        ),
                       ),
                     ],
                   ),
-                  const Column(
+                  Column(
                     children: [
-                      CatCardWid(
-                        cardBgColor: mainTile,
-                        cardWidth: 200,
-                        title: 'Nightlife',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NightlifePage(),
+                            ),
+                          );
+                        },
+                        child: const CatCardWid(
+                          cardBgColor: mainTile,
+                          cardWidth: 200,
+                          title: 'Nightlife',
+                        ),
                       ),
-                      CatCardWid(
-                        cardBgColor: subTile,
-                        cardWidth: 200,
-                        title: 'Cultural',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CulturalPage(),
+                            ),
+                          );
+                        },
+                        child: const CatCardWid(
+                          cardBgColor: subTile,
+                          cardWidth: 200,
+                          title: 'Cultural',
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
-              const CatCardWid(
-                  cardBgColor: Colors.yellow,
-                  cardWidth: 400,
-                  title: "Book For A Ride Today!")
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BookingPage(),
+                    ),
+                  );
+                },
+                child: const CatCardWid(
+                    cardBgColor: Colors.yellow,
+                    cardWidth: 400,
+                    title: "Book For A Ride Today!"),
+              )
             ],
           ),
         )),
