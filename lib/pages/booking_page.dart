@@ -1,4 +1,5 @@
 import 'package:awesome_place/utils/colors.dart';
+import 'package:awesome_place/widgets/shared/gradiant_button.dart';
 import 'package:flutter/material.dart';
 
 class BookingPage extends StatelessWidget {
@@ -76,7 +77,11 @@ class BookingPage extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const GradiantButton(),
             ],
           ),
         ),
