@@ -23,7 +23,22 @@ class LandmarksPage extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: Column(
             children: [
+              Text("Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler."),
+               SizedBox(
+                height: 10,
+              ),
               LandMarksCard(),
+              SizedBox(
+                height: 10,
+              ),
+              LandMarksCard(),
+              SizedBox(
+                height: 10,
+              ),
+              LandMarksCard(),
+              SizedBox(
+                height: 30,
+              ),
             ],
           ),
         ),

@@ -31,7 +31,13 @@ class LandMarksCard extends StatelessWidget {
                   color: landMarksSub,
                 ),
               ),
-              Center(child: Image.asset("assets/land1.png")),
+              Center(
+                child: Image.asset(
+                  "assets/land1.png",
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
               const Text(
                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.")
             ],
